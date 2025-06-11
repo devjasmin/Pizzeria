@@ -72,7 +72,9 @@ body {
   margin-top: 4rem;
 }
 
-.button {
+.button,
+.button-inverted {
+  width: fit-content;
   color: #fff;
   background-color: var(--primary-color);
   text-decoration: none;
@@ -81,9 +83,19 @@ body {
   transition: color 0.2s ease-in-out;
 }
 
+.button-inverted {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
 .button:hover {
   color: var(--primary-color);
   background-color: transparent;
+}
+
+.button-inverted:hover {
+  background-color: var(--primary-color);
+  color: #fff;
 }
 
 .heading {
@@ -182,92 +194,106 @@ body {
   color: var(--text-color);
 }
 
-.kontakt-container {
-  margin: 1rem 0;
-  padding: 1rem 0;
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
 
-  .kontakt .heading {
-    margin: 0 auto;
-    flex-direction: column;
-    align-items: center;
-  }
+.contact .heading {
+  margin-top: 0;
+}
 
-  .kontakt {
-    display: grid;
+.contact-detail {
+  margin-top: 0.5rem;
+  color: var(--text-color);
+}
+
+.contact-actions {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contact-image {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  .navbar {
     gap: 2rem;
+    font-size: 1rem;
+  }
+  .title {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+  .slogan {
+    font-size: 1.5rem;
+  }
+  .button,
+  .button-inverted {
+    padding: 1.2rem 2.5rem;
   }
 
-  .kontakt-image {
-    display: flex;
-    justify-content: left;
-    padding: 1rem 0;
+  .about-text {
+    font-size: 1rem;
   }
 
-  p.kontakt {
-    display: flex;
-    justify-content: right;
+  .contact-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
 
-  .kontaktbild {
-    width: 80%;
-    height: 80%;
-    object-fit: contain;
+  .contact-image {
+    width: 60%;
   }
 
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: 1000px) {
     .navbar {
-      gap: 2rem;
-      font-size: 1rem;
+      gap: 4rem;
     }
     .title {
-      font-size: 4rem;
-      line-height: 4rem;
+      font-size: 6rem;
+      line-height: 6.5rem;
     }
-    .slogan {
-      font-size: 1.5rem;
+    .heading {
+      font-size: 2rem;
     }
-    .button {
-      padding: 1.2rem 2.5rem;
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 3rem;
+      align-items: center;
+    }
+    .about-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .about-images .about-images-small {
+      gap: 1rem;
     }
 
-    @media only screen and (min-width: 1000px) {
-      .navbar {
-        gap: 4rem;
-      }
-      .title {
-        font-size: 6rem;
-        line-height: 6.5rem;
-      }
-      .heading {
-        font-size: 2rem;
-      }
-      .about {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        margin-top: 3rem;
-        align-items: center;
-      }
-      .about-images {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-      }
-      .about-images .about-images-small {
-        gap: 1rem;
-      }
-
-      .info-wrapper {
-        margin: 8rem 0;
-        padding: 6rem 0;
-      }
+    .info-wrapper {
+      margin: 8rem 0;
+      padding: 6rem 0;
+    }
+    .hours {
+      margin-top: 2rem;
 
       .hours-entry {
         width: 20rem;
         font-size: 1.2rem;
         margin-bottom: 0.5rem;
       }
+      .contact .heading {
+        margin-bottom: 1rem;
+      }
 
-      .hours {
-        margin-top: 2rem;
+      .contact-detail {
+        margin-top: 1rem;
       }
     }
   }
