@@ -199,6 +199,7 @@ body {
 .contact-content {
   display: flex;
   flex-direction: column;
+  padding: 0.5rem;
   gap: 2rem;
 }
 
@@ -252,8 +253,13 @@ body {
   .navbar,
   .footer-links {
     gap: 2rem;
-    font-size: 1rem;
+    font-size: 2rem;
   }
+
+  .nav-item {
+    font-size: 0.9rem;
+  }
+
   .footer {
     margin-top: 4rem;
     padding: 3rem 0;
@@ -262,6 +268,10 @@ body {
 
   .footer-links {
     flex-direction: row;
+  }
+
+  .footer-item {
+    font-size: 0.9rem;
   }
 
   .title {
@@ -294,6 +304,14 @@ body {
     .navbar,
     .footer-links {
       gap: 4rem;
+    }
+
+    .nav-item {
+      font-size: 1.2rem;
+    }
+
+    .footer-item {
+      font-size: 1.2rem;
     }
 
     .footer {
